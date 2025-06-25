@@ -6,9 +6,6 @@
 
 **Aicraft** è un framework di machine learning scritto interamente in C, pensato per operare su sistemi a risorse limitate (meno di **512 MB** di memoria) e capace di sfruttare il backend CUDA in modo opzionale.  
 Creato da **Tobias Tesauri**, Aicraft nasce come sfida personale per comprendere le fondamenta del deep learning senza ricorrere a librerie esterne.
-![License](https://img.shields.io/github/license/TobiasTesauri/Aicraft)
-![Stars](https://img.shields.io/github/stars/TobiasTesauri/Aicraft?style=social)
-![Forks](https://img.shields.io/github/forks/TobiasTesauri/Aicraft?style=social)
 
 ---
 
