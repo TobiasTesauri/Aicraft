@@ -1,6 +1,8 @@
 # Aicraft – Framework di Machine Learning a Basso Impatto
 
-<img src="https://via.placeholder.com/600x120?text=T%26M+Softwares+Logo" alt="T&M Softwares Logo" align="center" />
+<div align="center">
+  <img src="./logo.png" alt="T&M Softwares Logo" width="300"/>
+</div>
 
 **Aicraft** è un framework di machine learning scritto interamente in C, pensato per operare su sistemi a risorse limitate (meno di **512 MB** di memoria) e capace di sfruttare il backend CUDA in modo opzionale.  
 Creato da **Tobias Tesauri**, Aicraft nasce come sfida personale per comprendere le fondamenta del deep learning senza ricorrere a librerie esterne.
