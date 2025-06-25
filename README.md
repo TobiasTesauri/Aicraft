@@ -21,12 +21,6 @@ Creato da **Tobias Tesauri**, Aicraft nasce come sfida personale per comprendere
 - [Licenza](#licenza)
 - [Contatti](#contatti)
 
----
-
-## Introduzione
-
-_Aicraft_ è il frutto di un intenso studio autodidatta:  
-nel giro di poche ore, e con appena 2 mesi di esperienza, ho derivato e implementato da zero l'intero apparato matematico che sta alla base di una rete neurale. Scritto in linguaggio C, il framework mette in luce una solida conoscenza dei calcoli numerici e della gestione della memoria, fondamentale per applicazioni embedded e progetti accademici avanzati.
 
 ---
 
