@@ -143,7 +143,7 @@ int main() {
 ### Requisiti Minimi
 - **GCC 9.0+** o **Clang 10.0+** (C99/C11)
 - **CMake 3.15+**
-- **4GB RAM** minimo, 8GB consigliato
+- **256MB RAM** minimo, 512MB consigliato
 - **Linux/macOS/Windows** (testato su tutti)
 
 ### Opzionali per Performance
