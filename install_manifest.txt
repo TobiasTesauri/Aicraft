@@ -1,0 +1,5 @@
+C:/Users/Hélène/Downloads/AiCraft/install/lib/aicraft.lib
+C:/Users/Hélène/Downloads/AiCraft/install/bin/aicraft_demo.exe
+C:/Users/Hélène/Downloads/AiCraft/install/include/aicraft/tensor.h
+C:/Users/Hélène/Downloads/AiCraft/install/include/aicraft/training.h
+C:/Users/Hélène/Downloads/AiCraft/install/include/aicraft/aicraft_advanced.h
