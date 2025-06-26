@@ -1,112 +1,279 @@
-# Aicraft – Framework di Machine Learning a Basso Impatto
-
 <div align="center">
-  <img src="./logo.png" alt="T&M Softwares Logo" width="300"/>
+  <img src="./logo.png" alt="Aicraft Logo" width="300"/>
+  <h1>Aicraft</h1>
+  <h3>Machine Learning Framework in C – Per chi vuole davvero capire (e soffrire)</h3>
+  <p>
+    <a href="https://github.com/TobiasTesauri/Aicraft"><img src="https://img.shields.io/github/stars/TobiasTesauri/Aicraft?style=social" alt="Stars"></a>
+    <a href="https://github.com/TobiasTesauri/Aicraft/blob/main/LICENSE"><img src="https://img.shields.io/github/license/TobiasTesauri/Aicraft?color=blue" alt="License"></a>
+    <img src="https://img.shields.io/badge/C-99-blue.svg" alt="C99">
+    <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20Embedded-lightgrey">
+    <img src="https://img.shields.io/badge/Backend-CPU%20%7C%20CUDA-green">
+  </p>
+  <blockquote>
+    <b>Perché usare TensorFlow è troppo facile... e troppo noioso.</b>
+  </blockquote>
 </div>
 
-**Aicraft** è un framework di machine learning scritto interamente in C, pensato per operare su sistemi a risorse limitate (meno di **512 MB** di memoria) e capace di sfruttare il backend CUDA in modo opzionale.  
-Creato da **Tobias Tesauri**, Aicraft nasce come sfida personale per comprendere le fondamenta del deep learning senza ricorrere a librerie esterne.
+---
+
+## 🚀 Introduzione
+
+Se stai leggendo qui, probabilmente sei stufo delle solite “magic box” che fanno deep learning col bottone “train”.  
+**Aicraft** è un framework scritto in C puro, minimale e spietato. Nessuna dipendenza, nessun layer astratto dietro cui nascondere l’incompetenza: solo C, puntatori, e una sana dose di profanità.  
+Pensato per chi vuole capire davvero cosa succede sotto il cofano – o per chi ama complicarsi la vita.
+
+- **Autore:** Tobias Tesauri (che evidentemente non aveva nulla di meglio da fare)
+- **Obiettivo:** Rendere il machine learning trasparente… e un po’ più doloroso
+- **Per chi:** Studenti masochisti, ingegneri old school, nostalgici di malloc, e chi pensa che Python sia “troppo user-friendly”.
 
 ---
 
-## Indice
+## 📑 Indice
 
-- [Introduzione](#introduzione)
-- [Caratteristiche](#caratteristiche)
-- [Architettura](#architettura)
-- [Getting Started](#getting-started)
-- [Compilazione e Utilizzo](#compilazione-e-utilizzo)
-- [Estensioni Future](#estensioni-future)
-- [Documentazione](#documentazione)
+- [Perché dovresti (non) usarlo](#perché-dovresti-non-usarlo)
+- [Caratteristiche (desolate)](#caratteristiche-desolate)
+- [Architettura (inutilmente chiara)](#architettura-inutilmente-chiara)
+- [Componenti principali](#componenti-principali)
+- [Esempi (che funzionano, si spera)](#esempi-che-funzionano-si-spera)
+- [Installazione & Quickstart (o Quickragequit)](#installazione--quickstart-o-quickragequit)
+- [Compilazione (divertiti con il Makefile)](#compilazione-divertiti-con-il-makefile)
+- [Come Funziona (spoiler: a fatica)](#come-funziona-spoiler-a-fatica)
+- [Roadmap (sogni irrealizzabili)](#roadmap-sogni-irrealizzabili)
+- [Contribuire (se proprio insisti)](#contribuire-se-proprio-insisti)
+- [FAQ (Frequently Annoying Questions)](#faq-frequently-annoying-questions)
+- [Documentazione (per chi legge davvero)](#documentazione-per-chi-legge-davvero)
 - [Licenza](#licenza)
-- [Contatti](#contatti)
-
-
----
-
-## Caratteristiche
-
-- **Zero dipendenze:** Intero codice scritto in C, senza reliance su librerie esterne.
-- **Supporto duale:** Compatibilità con CPU e, opzionalmente, accelerazione via CUDA.
-- **Memory-friendly:** Progettato per operare con un utilizzo della memoria inferiore a 512 MB.
-- **Design Modulare:** Separazione chiara tra gestione tensori, training e gestione dei backend.
-- **Logging & Profiling:** Output colorato e configurabile, per monitorare l’esecuzione in tempo reale.
-- **Didattico & Innovativo:** Ogni funzione matematica è stata derivata “on the fly”, enfatizzando la comprensione profonda.
+- [Contatti & Credits](#contatti--credits)
 
 ---
 
-## Architettura
+## 🦴 Perché dovresti (non) usarlo
 
-Aicraft è strutturato in vari moduli principali:
+- Vuoi capire cosa succede davvero in una rete neurale, compresi tutti i bug.
+- Ti piace il brivido di gestire la memoria a mano.
+- Odii le dipendenze.
+- Vuoi performance su hardware miserabile.
+- Ti sei stancato di “pip install” e vuoi sudare per ogni riga compilata.
 
-- **Tensor Engine:** Gestisce l’allocazione, l’elaborazione e le operazioni aritmetiche sui tensori.
-- **Modulo Training:** Implementa la forward propagation e contiene gli ottimizzatori (es. SGD, Adam).
-- **Gestore Backend:** Rileva la presenza di CUDA e, se disponibile, la usa; altrimenti, ricade sulla CPU.
-- **Logger & Profiler:** Fornisce un sistema di log dettagliato e strumenti di profilazione per il monitoraggio 
-  delle performance.
-
-**Diagramma Architetturale:**
-
-+-----------------------+ | Input Data | +-----------+-----------+ | v +-----------------------+ | Tensor Engine | | (Allocazione & Ops) | +-----------+-----------+ | v +-----------------------+ | Modulo Training | | (Forward & Optim.) | +-----------+-----------+ | v +-----------------------+ | Gestore Backend | | (CPU / CUDA) | +-----------------------+
-
+Se invece vuoi solo far girare il prossimo LLM, chiudi questa pagina. Seriamente.
 
 ---
 
-## Getting Started
+## 🌟 Caratteristiche (desolate)
+
+- **Zero dipendenze:** solo C99, niente scorciatoie.
+- **CPU + CUDA:** se hai una GPU, bene; se no, arrangiati.
+- **Memory friendly:** gira anche su tostapane, a patto di non chiedergli troppo.
+- **Design modulare:** o almeno ci prova.
+- **Logging colorato:** così puoi vedere gli errori in technicolor.
+- **Codice didattico:** se lo capisci, sei già avanti.
+- **Estensibilità:** puoi modificarlo, se ne hai il coraggio.
+- **Whitepaper e guide:** per chi pensa che i commenti siano meglio dei tutorial su TikTok.
+
+---
+
+## 🏗️ Architettura (inutilmente chiara)
+
+```mermaid
+graph TD;
+    InputData[Input Data] --> TensorEngine[Tensor Engine<br/>(Allocazione & Ops)];
+    TensorEngine --> Training[Training Module<br/>(Forward, Backward, Ottimizzatori)];
+    Training --> Backend[Backend Manager<br/>(CPU/CUDA)];
+    Backend --> Logger[Logger & Profiler];
+    Logger --> Output[Output & Profiling];
+```
+- **Tensor Engine:** i tuoi dati, la tua memoria, i tuoi crash.
+- **Training Module:** qui si fa sul serio (o si segfaulta).
+- **Backend Manager:** CPU o GPU? Dipende dal karma.
+- **Logger & Profiler:** per capire quanto lentamente sta andando.
+
+---
+
+## 🧩 Componenti principali
+
+### 1. Tensori
+- Array multidimensionali con la personalità di un C struct.
+- Funzioni per allocazione, slicing e per perdere la testa.
+
+### 2. Modello
+- API per reti sequenziali. Layer? Quelli che ti servono, o che riesci a scrivere.
+
+### 3. Ottimizzatori & Loss
+- SGD e Adam (in arrivo, forse). Loss personalizzabili, o semplicemente frustranti.
+
+### 4. Backend
+- CPU/GPU, a seconda dell’umore della tua macchina.
+
+### 5. Logging & Debug
+- Output colorato per i tuoi errori. Profiler per misurare quanto lentamente va tutto.
+
+---
+
+## 🧪 Esempi (che funzionano, si spera)
+
+```c
+#include "aicraft.h"
+
+// Creazione tensore 3x3
+Tensor* t = tensor_create(3, 3);
+tensor_fill(t, 0.0f);
+
+// Definizione modello semplice
+Model* m = model_create();
+model_add_dense(m, 3, 4, RELU);
+model_add_dense(m, 4, 1, SIGMOID);
+model_compile(m, MSE, SGD);
+
+// Training su dati ridicoli
+model_train(m, X_train, y_train, epochs=100, batch=10, learning_rate=0.01);
+
+// Inference
+Tensor* pred = model_predict(m, X_test);
+
+// Pulizia memoria (obbligatoria, qui non c'è garbage collector)
+model_free(m);
+tensor_free(t);
+```
+*Altri esempi (e bug) nella cartella `/examples`.*
+
+---
+
+## ⚡ Installazione & Quickstart (o Quickragequit)
 
 ### Prerequisiti
 
-- **Compilatore C:** GCC (o qualsiasi compilatore compatibile con C99)
-- **CUDA (opzionale):** Necessario se si intende sfruttare l'accelerazione GPU
+- GCC (C99) o equivalente
+- (Opzionale) CUDA Toolkit, se vuoi illuderti di avere performance
 
-### Installazione
-
-Clona il repository:
+### Clonazione
 
 ```bash
 git clone https://github.com/TobiasTesauri/Aicraft.git
 cd Aicraft
-Compilazione e Utilizzo
-Compilazione
-Puoi compilare il progetto manualmente:
+```
 
-bash
+---
+
+## 🛠️ Compilazione (divertiti con il Makefile)
+
+### Manuale
+
+```bash
 gcc -std=c99 -o aicraft src/*.c -lm
-Oppure, se presente, utilizza il Makefile:
+```
 
-bash
+### Con Makefile
+
+```bash
 make all
-Esecuzione
-Avvia il programma:
+```
 
-bash
+### Esecuzione
+
+```bash
 ./aicraft
-Note: Assicurati di avere la configurazione adatta se utilizzi accelerazione CUDA.
+```
+> ⚠️ Se usi CUDA, buona fortuna.
 
-Estensioni Future
-Backpropagation Completo: Integrazione di un sistema completo per il retropropagazione.
+---
 
-Quantizzazione: Supporto a computazioni in int8/fixed-point per dispositivi embedded.
+## 🔎 Come Funziona (spoiler: a fatica)
 
-Serializzazione dei Modelli: Funzionalità per salvare e caricare modelli.
+1. **Definisci il modello**  
+   Layer per layer, a mano. Nessun wizard.
 
-Interfaccia CLI/API: Sviluppo di un’interfaccia user-friendly per semplificare l’interazione col framework.
+2. **Prepara i dati**  
+   Tensori, batch e un po’ di pazienza.
 
-Contributi e suggerimenti sono sempre benvenuti!
+3. **Compila e addestra**  
+   Scegli ottimizzatore e parametri. Speriamo bene.
 
-Documentazione
-La documentazione completa, inclusi whitepapers con le derivazioni matematiche e guide tecniche, è disponibile nella cartella /docs.
+4. **Valuta**  
+   Se i risultati fanno schifo… benvenuto nel machine learning vero.
 
-Licenza
-Questo progetto è rilasciato sotto licenza MIT.
+5. **Profiling**  
+   Guarda i log e chiediti perché ci hai messo così tanto.
 
-Contatti
-Tobias Tesauri
+6. **Personalizza**  
+   Perché sicuramente vorrai aggiungere “quel layer in più”.
 
-GitHub: TobiasTesauri
+---
 
-Email: tobias.tesaur@cillarioferrero.it
+## 🧭 Roadmap (sogni irrealizzabili)
 
-Telefono: 351 550 7405
+- [ ] Backpropagation che non si schianta
+- [ ] Quantizzazione (se non perdi prima la pazienza)
+- [ ] Serializzazione modelli (per esportare le tue delusioni)
+- [ ] API/CLI user-friendly (ma non troppo)
+- [ ] Layer convoluzionali (CNN per chi crede ancora nelle immagini)
+- [ ] Esempi per microcontrollori (se vuoi soffrire anche su embedded)
+- [ ] Test automatici (magari uno che passa, prima o poi)
+- [ ] Benchmarking (per vedere quanto sei lento rispetto a PyTorch)
+- [ ] Video tutorial (ma chi li guarda davvero?)
 
-Crafted with passion by T&M Softwares. Eleva la tua ricerca in AI con semplicità e innovazione.
+---
+
+## 🤝 Contribuire (se proprio insisti)
+
+Pull request, issue e suggerimenti sono benvenuti. Se hai voglia di perdere tempo, accomodati.  
+**Regole non scritte:**
+- Scrivi codice chiaro (più o meno).
+- Commenta, o almeno prova a spiegare l’inspiegabile.
+- Testa su almeno una piattaforma (Linux, Windows, o sul tuo tostapane).
+
+> 💬 Per dubbi esistenziali, apri una [Discussion](https://github.com/TobiasTesauri/Aicraft/discussions).
+
+---
+
+## ❓ FAQ (Frequently Annoying Questions)
+
+**Q: È adatto per produzione industriale?**  
+A: Solo se odi la tua azienda.
+
+**Q: Supporta reti neurali complesse?**  
+A: Più o meno, finché non esaurisci la RAM (o la pazienza).
+
+**Q: Come posso aggiungere nuovi layer/ottimizzatori?**  
+A: Scrivi codice, bestemmia, ripeti.
+
+**Q: Posso usarlo su microcontrollori?**  
+A: Sì, se ti piace l’avventura.
+
+**Q: Si può esportare un modello?**  
+A: In futuro. Per ora, carta e penna.
+
+**Q: Tutorial video?**  
+A: Forse, ma non aspettarti uno youtuber.
+
+---
+
+## 📚 Documentazione (per chi legge davvero)
+
+La documentazione dettagliata è in `/docs`, per i pochi che ancora la consultano.  
+Troverai:
+- Derivazioni matematiche (per veri nerd)
+- Esempi (testati, non garantiti)
+- Tutorial scritti, niente TikTok
+
+---
+
+## 📝 Licenza
+
+MIT. Fanne quello che vuoi. Non lamentarti se poi non funziona.
+
+---
+
+## 📞 Contatti & Credits
+
+- **Autore:** Tobias Tesauri
+- **GitHub:** [@TobiasTesauri](https://github.com/TobiasTesauri)
+- **Email:** tobias.tesaur@cillarioferrero.it
+- **Telefono:** 351 550 7405
+
+> Prodotto con sudore, caffeina e un pizzico di disprezzo per le scorciatoie.
+
+---
+
+<div align="center">
+  <b>⭐ Dai una stella se ti è piaciuto. O anche solo per compassione. ⭐</b>
+</div>
