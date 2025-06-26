@@ -1,0 +1,7 @@
+C:/Users/Hélène/Downloads/AiCraft/build/CMakeFiles/aicraft.dir
+C:/Users/Hélène/Downloads/AiCraft/build/CMakeFiles/aicraft_demo.dir
+C:/Users/Hélène/Downloads/AiCraft/build/CMakeFiles/train_demo.dir
+C:/Users/Hélène/Downloads/AiCraft/build/CMakeFiles/PACKAGE.dir
+C:/Users/Hélène/Downloads/AiCraft/build/CMakeFiles/INSTALL.dir
+C:/Users/Hélène/Downloads/AiCraft/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Hélène/Downloads/AiCraft/build/CMakeFiles/ZERO_CHECK.dir
