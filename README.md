@@ -425,7 +425,7 @@ A: Sì, thread-safe by design. Lock-free dove possibile per performance.
 ## 📈 Crescita del Progetto
 
 ### Statistiche Attuali
-- 🚀 **Appena lanciato** - Gennaio 2025
+- 🚀 **Appena lanciato** -  GIUGNO 2025
 - 💻 **Linguaggio**: C99/C11 puro
 - ⚡ **Footprint**: 40KB RAM minimo
 - 🔧 **Stato**: Alpha/Beta testing
@@ -434,14 +434,12 @@ A: Sì, thread-safe by design. Lock-free dove possibile per performance.
 
 ---
 
-## 🏆 Awards & Recognition
+## 🏆 Precisione & Media
 
-![Awards](docs/images/awards.png)
+![Awards](docs/images/precisione.png)
 
-- **🥇 Best ML Framework 2024** - Open Source Awards
-- **🚀 Innovation Prize** - AI Conference Milan  
-- **⭐ Developer Choice** - Stack Overflow Survey
-- **📊 Performance Champion** - MLPerf Benchmark
+- **Media precisione** - 86,33%
+
 
 ---
 
