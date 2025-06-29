@@ -500,7 +500,7 @@ Prodotto con:
 - La community open source per l'ispirazione
 - I beta tester che hanno sopportato i primi bug
 - Chi ha creduto nel progetto fin dall'inizio
-- Mia moglie per aver sopportato le nottate di coding
+
 
 ---
 
@@ -510,10 +510,8 @@ Prodotto con:
 
 [![GitHub stars](https://img.shields.io/github/stars/TobiasTesauri/Aicraft?style=social)](https://github.com/TobiasTesauri/Aicraft/stargazers)
 
-*Unisciti agli oltre 10.000 sviluppatori che hanno scelto Aicraft per i loro progetti ML*
 
 ---
 
-**Made with ❤️ in Italy** 🇮🇹
 
 </div>
