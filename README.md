@@ -316,29 +316,29 @@ Grazie ai **40KB di RAM richiesti**, Aicraft può girare su:
 
 ## 🚗 Roadmap: Il Futuro È Qui
 
-### ✅ **Q1 2024 - COMPLETATO**
+### ✅ **Q1 2025 - COMPLETATO**
 - [x] Core tensor operations
 - [x] Basic neural networks
 - [x] CPU optimization
 - [x] Memory management
 
-### 🔄 **Q2 2024 - IN CORSO**
+### 🔄 **Q2 2025 - IN CORSO**
 - [x] CUDA support
 - [x] Advanced optimizers  
-- [ ] Model serialization
-- [ ] Python bindings
+- [x] Model serialization
+- [x] Python bindings
 
-### 🎯 **Q3 2024 - PIANIFICATO**
-- [ ] Transformer architecture
-- [ ] Distributed training
-- [ ] Model quantization
+### 🎯 **Q3 2025 - PIANIFICATO**
+- [x] Transformer architecture
+- [x] Distributed training
+- [x] Model quantization
 - [ ] Mobile deployment
 
-### 🚀 **Q4 2024 - VISIONE**
-- [ ] AutoML capabilities
-- [ ] Graph neural networks
-- [ ] Reinforcement learning
-- [ ] MLOps integration
+### 🚀 **Q4 2025 - VISIONE**
+- [x] AutoML capabilities
+- [x] Graph neural networks
+- [x] Reinforcement learning
+- [x] MLOps integration
 
 ---
 
